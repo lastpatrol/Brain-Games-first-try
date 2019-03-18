@@ -1,0 +1,25 @@
+{
+  "name": "brain-games-hexlet-tim",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lastpatrol/project-lvl1-s462.git"
+  },
+  "author": "lastpatrol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lastpatrol/project-lvl1-s462/issues"
+  },
+  "homepage": "https://github.com/lastpatrol/project-lvl1-s462#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4"
+  }
+}
