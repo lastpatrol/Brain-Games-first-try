@@ -1,13 +1,16 @@
 {
   "name": "brain-games-hexlet-tim",
   "version": "1.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "Console game, study project for Hexlet.",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "game",
+    "hexlet"
   ],
   "scripts": {
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
