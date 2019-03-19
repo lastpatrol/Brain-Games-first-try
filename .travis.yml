@@ -4,3 +4,8 @@ node_js:
 
 script:
   - make lint
+
+notifications:
+  email:
+    on_success: always
+    on_failure: always
