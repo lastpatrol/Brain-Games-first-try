@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import { cons, car, cdr } from 'hexlet-pairs';
 
 export const welcome = () => {
   console.log('\nWelcome to the Brain Games!');
@@ -10,30 +11,29 @@ export const greetAndGetName = () => {
   return playerName;
 };
 
-export const playEven = () => {
-  const objective = 'Answer "yes" if number is even, otherwise answer "no".\n';
-  console.log(objective);
+export const makeStep = (question, answer) => cons(question, answer);
+export const getQuestion = step => car(step);
+export const getAnswer = step => cdr(step);
 
+export const getRandom = (min, max) => Math.floor(Math.random() * (max - min) + min);
+
+export const play = (objective, makeQuestionAndAnswer) => {
+  welcome();
+  console.log(objective);
   const playerName = greetAndGetName();
 
-  const getRandom = () => {
-    const min = 1;
-    const max = 100;
-    return Math.floor(Math.random() * (max - min) + min);
-  };
-
-  const isEven = num => num % 2 === 0;
-
   for (let i = 0; i < 3; i += 1) {
-    const num = getRandom();
-    console.log(`Question: ${num}`);
-    const playerAnswer = readlineSync.question('Your answer: ');
-    const correctAnswer = isEven(num) ? 'yes' : 'no';
+    const step = makeQuestionAndAnswer();
+    const question = getQuestion(step);
+    const answer = getAnswer(step);
 
-    if (playerAnswer === correctAnswer) {
+    console.log(`Question: ${question}`);
+    const playerAnswer = readlineSync.question('Your answer: ');
+
+    if (playerAnswer === answer) {
       console.log('Correct!');
     } else {
-      console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
       console.log(`Let's try again, ${playerName}!`);
       return;
     }

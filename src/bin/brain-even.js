@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { playEven, welcome } from '..';
+import { play } from '..';
+import { objective, makeQuestionAndAnswer } from '../games/even';
 
-welcome();
-playEven();
+play(objective, makeQuestionAndAnswer);

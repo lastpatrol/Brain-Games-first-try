@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-import { greetAndGetName, welcome } from '..';
+import { cons, car, cdr, toString } from 'hexlet-pairs';
+import { welcome, greetAndGetName,  } from '..';
 
 welcome();
 greetAndGetName();
