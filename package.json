@@ -1,6 +1,6 @@
 {
   "name": "brain-games-hexlet-tim",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Console game, study project for Hexlet.",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
