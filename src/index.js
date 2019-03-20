@@ -12,10 +12,10 @@ const printWelcome = () => console.log('Welcome to the Brain Games!');
 
 const howManyRounds = 3;
 
-export default (objective, makeQuestionAndAnswer) => {
+export default (description, makeQuestionAndAnswer) => {
   printEmptyLine();
   printWelcome();
-  console.log(objective);
+  console.log(description);
   printEmptyLine();
   const playerName = greetAndGetName();
   printEmptyLine();
