@@ -1,7 +1,7 @@
 import play from '..';
 import { makeStep, getRandom } from '../utils';
 
-const objective = 'What is the result of the expression?';
+const instruction = 'What is the result of the expression?';
 
 const makeQuestionAndAnswer = () => {
   const num1 = getRandom(1, 50);
@@ -30,4 +30,4 @@ const makeQuestionAndAnswer = () => {
   return makeStep(question, answer);
 };
 
-export default () => play(objective, makeQuestionAndAnswer);
+export default () => play(instruction, makeQuestionAndAnswer);

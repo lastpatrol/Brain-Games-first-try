@@ -1,7 +1,7 @@
 import play from '..';
 import { makeStep, getRandom } from '../utils';
 
-const objective = 'What number is missing in the progression?';
+const instruction = 'What number is missing in the progression?';
 
 const totalPoints = 10;
 
@@ -26,4 +26,4 @@ const makeQuestionAndAnswer = () => {
   return makeStep(question, answer);
 };
 
-export default () => play(objective, makeQuestionAndAnswer);
+export default () => play(instruction, makeQuestionAndAnswer);

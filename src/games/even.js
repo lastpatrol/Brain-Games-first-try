@@ -3,7 +3,7 @@ import { makeStep, getRandom } from '../utils';
 
 const isEven = num => num % 2 === 0;
 
-const objective = 'Answer "yes" if number even otherwise answer "no".';
+const instruction = 'Answer "yes" if number even otherwise answer "no".';
 
 const makeQuestionAndAnswer = () => {
   const num = getRandom(1, 100);
@@ -12,4 +12,4 @@ const makeQuestionAndAnswer = () => {
   return makeStep(question, answer);
 };
 
-export default () => play(objective, makeQuestionAndAnswer);
+export default () => play(instruction, makeQuestionAndAnswer);
