@@ -1,9 +1,9 @@
 import play from '..';
 import { makeStep, getRandom } from '../utils';
 
-export const objective = 'What is the result of the expression?';
+const objective = 'What is the result of the expression?';
 
-export const makeQuestionAndAnswer = () => {
+const makeQuestionAndAnswer = () => {
   const num1 = getRandom(1, 50);
   const num2 = getRandom(1, 50);
   const numSmall = getRandom(1, 10);
@@ -29,4 +29,4 @@ export const makeQuestionAndAnswer = () => {
   return makeStep(question, answer);
 };
 
-export const launch = () => play(objective, makeQuestionAndAnswer);
+export default () => play(objective, makeQuestionAndAnswer);

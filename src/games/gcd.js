@@ -1,9 +1,9 @@
 import play from '..';
 import { makeStep, getRandom } from '../utils';
 
-export const objective = 'Find the greatest common divisor of given numbers.';
+const objective = 'Find the greatest common divisor of given numbers.';
 
-export const makeQuestionAndAnswer = () => {
+const makeQuestionAndAnswer = () => {
   const findGcd = (one, two) => {
     const iter = (a, b, counter, acc) => {
       if (counter > a || counter > b) {
@@ -23,4 +23,4 @@ export const makeQuestionAndAnswer = () => {
   return makeStep(question, answer);
 };
 
-export const launch = () => play(objective, makeQuestionAndAnswer);
+export default () => play(objective, makeQuestionAndAnswer);
