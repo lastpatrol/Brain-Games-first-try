@@ -16,6 +16,9 @@ gcd:
 progression:
 	npx babel-node src/bin/brain-progression.js
 
+exp:
+	npx babel-node experiment.js
+
 publish:
 	npm publish
 

@@ -7,7 +7,7 @@ const objective = 'Answer "yes" if number even otherwise answer "no".';
 
 const makeQuestionAndAnswer = () => {
   const num = getRandom(1, 100);
-  const question = String(num);
+  const question = num;
   const answer = isEven(num) ? 'yes' : 'no';
   return makeStep(question, answer);
 };

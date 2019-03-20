@@ -23,7 +23,7 @@ export default (objective, makeQuestionAndAnswer) => {
   for (let i = 0; i < howManyRounds; i += 1) {
     const step = makeQuestionAndAnswer();
     const question = getQuestion(step);
-    const answer = getAnswer(step);
+    const answer = String(getAnswer(step));
 
     console.log(`Question: ${question}`);
     const playerAnswer = readlineSync.question('Your answer: ');

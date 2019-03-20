@@ -6,25 +6,26 @@ const objective = 'What is the result of the expression?';
 const makeQuestionAndAnswer = () => {
   const num1 = getRandom(1, 50);
   const num2 = getRandom(1, 50);
-  const numSmall = getRandom(1, 10);
-  const operation = getRandom(1, 4);
+  const operatorPick = getRandom(1, 4);
 
-  let question = '';
+  let operationSymbol = '';
   let answer = '';
 
-  switch (operation) {
+  switch (operatorPick) {
     case 1:
-      question = `${num1} + ${num2}`;
+      operationSymbol = '+';
       answer = String(num1 + num2);
       break;
     case 2:
-      question = `${num1} - ${num2}`;
+      operationSymbol = '-';
       answer = String(num1 - num2);
       break;
     default:
-      question = `${num1} * ${numSmall}`;
-      answer = String(num1 * numSmall);
+      operationSymbol = '*';
+      answer = String(num1 * num2);
   }
+
+  const question = `${num1} ${operationSymbol} ${num2}`;
 
   return makeStep(question, answer);
 };
