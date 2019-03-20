@@ -1,6 +1,7 @@
-import { makeStep, getRandom, play } from '..';
+import play from '..';
+import { makeStep, getRandom } from '../utils';
 
-export const objective = 'What is the result of the expression?\n';
+export const objective = 'What is the result of the expression?';
 
 export const makeQuestionAndAnswer = () => {
   const num1 = getRandom(1, 50);

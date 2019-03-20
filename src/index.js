@@ -1,28 +1,26 @@
 import readlineSync from 'readline-sync';
-import { cons, car, cdr } from 'hexlet-pairs';
+import { getQuestion, getAnswer } from './utils';
 
-export const welcome = () => {
-  console.log('\nWelcome to the Brain Games!');
-};
-
-export const greetAndGetName = () => {
+const greetAndGetName = () => {
   const playerName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${playerName}!\n`);
+  console.log(`Hello, ${playerName}!`);
   return playerName;
 };
 
-export const makeStep = (question, answer) => cons(question, answer);
-export const getQuestion = step => car(step);
-export const getAnswer = step => cdr(step);
+const printEmptyLine = () => console.log('');
+const printWelcome = () => console.log('Welcome to the Brain Games!');
 
-export const getRandom = (min, max) => Math.floor(Math.random() * (max - min) + min);
+const howManyRounds = 3;
 
-export const play = (objective, makeQuestionAndAnswer) => {
-  welcome();
+export default (objective, makeQuestionAndAnswer) => {
+  printEmptyLine();
+  printWelcome();
   console.log(objective);
+  printEmptyLine();
   const playerName = greetAndGetName();
+  printEmptyLine();
 
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < howManyRounds; i += 1) {
     const step = makeQuestionAndAnswer();
     const question = getQuestion(step);
     const answer = getAnswer(step);

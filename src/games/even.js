@@ -1,8 +1,9 @@
-import { makeStep, getRandom, play } from '..';
+import play from '..';
+import { makeStep, getRandom } from '../utils';
 
 const isEven = num => num % 2 === 0;
 
-export const objective = 'Answer "yes" if number even otherwise answer "no".\n';
+export const objective = 'Answer "yes" if number even otherwise answer "no".';
 
 export const makeQuestionAndAnswer = () => {
   const num = getRandom(1, 100);
