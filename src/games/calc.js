@@ -1,4 +1,4 @@
-import { makeStep, getRandom } from '..';
+import { makeStep, getRandom, play } from '..';
 
 export const objective = 'What is the result of the expression?\n';
 
@@ -27,3 +27,5 @@ export const makeQuestionAndAnswer = () => {
 
   return makeStep(question, answer);
 };
+
+export const launch = () => play(objective, makeQuestionAndAnswer);

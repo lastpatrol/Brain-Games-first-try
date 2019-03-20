@@ -1,4 +1,4 @@
-import { makeStep, getRandom } from '..';
+import { makeStep, getRandom, play } from '..';
 
 export const objective = 'Find the greatest common divisor of given numbers.\n';
 
@@ -21,3 +21,5 @@ export const makeQuestionAndAnswer = () => {
   const answer = `${gcd}`;
   return makeStep(question, answer);
 };
+
+export const launch = () => play(objective, makeQuestionAndAnswer);

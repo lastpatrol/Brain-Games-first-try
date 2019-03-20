@@ -1,4 +1,4 @@
-import { makeStep, getRandom } from '..';
+import { makeStep, getRandom, play } from '..';
 
 const isEven = num => num % 2 === 0;
 
@@ -10,3 +10,5 @@ export const makeQuestionAndAnswer = () => {
   const answer = isEven(num) ? 'yes' : 'no';
   return makeStep(question, answer);
 };
+
+export const launch = () => play(objective, makeQuestionAndAnswer);
