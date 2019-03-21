@@ -13,7 +13,8 @@ const progressionAsString = (startValue, length, step, unknownPoint) => {
     }
 
     const newAddition = (value === unknownValue) ? '..' : value;
-    return iter(value + step, `${acc}${newAddition} `);
+    const spaceAddition = (value === endValue) ? '' : ' ';
+    return iter(value + step, `${acc}${newAddition}${spaceAddition}`);
   };
 
   return iter(startValue, '');
