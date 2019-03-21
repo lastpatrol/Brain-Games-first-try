@@ -6,7 +6,7 @@ const description = 'What number is missing in the progression?';
 const progressionLength = 10;
 
 const makeQuestionAndAnswer = () => {
-  const unknownPoint = getRandom(0, progressionLength);
+  const unknownPoint = getRandom(0, progressionLength - 1);
   const step = getRandom(1, 21);
   const startPointValue = getRandom(1, 21);
 
@@ -19,10 +19,10 @@ const makeQuestionAndAnswer = () => {
     return makeQuestion(counter + 1, newAcc);
   };
 
-  const answer = startPointValue + (step * unknownPoint);
+  const rightAnswer = String(startPointValue + (step * unknownPoint));
   const question = makeQuestion(0, '');
 
-  return makeStep(question, answer);
+  return makeStep(question, rightAnswer);
 };
 
 export default () => play(description, makeQuestionAndAnswer);
