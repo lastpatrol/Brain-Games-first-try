@@ -6,26 +6,22 @@ const description = 'What is the result of the expression?';
 const makeQuestionAndAnswer = () => {
   const num1 = getRandom(1, 50);
   const num2 = getRandom(1, 50);
-  const operatorPick = getRandom(1, 3);
+  const operations = ['+', '-', '*'];
+  const operatorIndex = getRandom(0, 2);
 
-  let operationSymbol = '';
+  const question = `${num1} ${operations[operatorIndex]} ${num2}`;
   let rightAnswer = '';
 
-  switch (operatorPick) {
-    case 1:
-      operationSymbol = '+';
+  switch (operatorIndex) {
+    case 0:
       rightAnswer = String(num1 + num2);
       break;
-    case 2:
-      operationSymbol = '-';
+    case 1:
       rightAnswer = String(num1 - num2);
       break;
     default:
-      operationSymbol = '*';
       rightAnswer = String(num1 * num2);
   }
-
-  const question = `${num1} ${operationSymbol} ${num2}`;
 
   return makeStep(question, rightAnswer);
 };
