@@ -18,7 +18,7 @@ const findGcd = (a, b) => {
   return findGcd(smaller, larger % smaller);
 };
 
-const makeQuestionAndAnswer = () => {
+const makeGameData = () => {
   const num1 = getRandom(1, 50);
   const num2 = getRandom(1, 50);
   const question = `${num1} ${num2}`;
@@ -26,4 +26,4 @@ const makeQuestionAndAnswer = () => {
   return makeStep(question, rightAnswer);
 };
 
-export default () => play(description, makeQuestionAndAnswer);
+export default () => play(description, makeGameData);

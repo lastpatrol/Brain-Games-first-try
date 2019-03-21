@@ -3,7 +3,7 @@ import { makeStep, getRandom } from '../utils';
 
 const description = 'What is the result of the expression?';
 
-const makeQuestionAndAnswer = () => {
+const makeGameData = () => {
   const num1 = getRandom(1, 50);
   const num2 = getRandom(1, 50);
   const operations = ['+', '-', '*'];
@@ -26,4 +26,4 @@ const makeQuestionAndAnswer = () => {
   return makeStep(question, rightAnswer);
 };
 
-export default () => play(description, makeQuestionAndAnswer);
+export default () => play(description, makeGameData);

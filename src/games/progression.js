@@ -3,26 +3,32 @@ import { makeStep, getRandom } from '../utils';
 
 const description = 'What number is missing in the progression?';
 
-const progressionLength = 10;
+const progressionAsString = (startValue, length, step, unknownPoint) => {
+  const endValue = startValue + step * (length - 1);
+  const unknownValue = startValue + step * unknownPoint;
 
-const makeQuestionAndAnswer = () => {
-  const unknownPoint = getRandom(0, progressionLength - 1);
-  const step = getRandom(1, 21);
-  const startPointValue = getRandom(1, 21);
-
-  const makeQuestion = (counter, acc) => {
-    if (counter === progressionLength) {
+  const iter = (value, acc) => {
+    if (value > endValue) {
       return acc;
     }
-    const newPointValue = (counter === unknownPoint) ? '..' : startPointValue + (step * counter);
-    const newAcc = `${acc}${newPointValue} `;
-    return makeQuestion(counter + 1, newAcc);
+
+    const newAddition = (value === unknownValue) ? '..' : value;
+    return iter(value + step, `${acc}${newAddition} `);
   };
 
-  const rightAnswer = String(startPointValue + (step * unknownPoint));
-  const question = makeQuestion(0, '');
+  return iter(startValue, '');
+};
+
+const makeGameData = () => {
+  const progressionLength = 10;
+  const unknownPoint = getRandom(0, progressionLength - 1);
+  const step = getRandom(1, 21);
+  const startValue = getRandom(1, 21);
+
+  const rightAnswer = String(startValue + (step * unknownPoint));
+  const question = progressionAsString(startValue, progressionLength, step, unknownPoint);
 
   return makeStep(question, rightAnswer);
 };
 
-export default () => play(description, makeQuestionAndAnswer);
+export default () => play(description, makeGameData);
