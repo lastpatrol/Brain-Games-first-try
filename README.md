@@ -27,19 +27,21 @@ You need to ansver, is the given number even or not. Launch with:
 ```
 brain-even
 ```
+[![asciicast](https://asciinema.org/a/jQ6KFGqYX5aW6hepXzRvIRgi9.svg)](https://asciinema.org/a/jQ6KFGqYX5aW6hepXzRvIRgi9?t=1&speed=2&cols=80&rows=15)
 
 ### Calculator  
 You need to calculate the value of an arithmetic expression. Launch with:   
 ```
 brain-calc
 ```
-
+[![asciicast](https://asciinema.org/a/8hjBG2jVvZh5LHStkhlrcvIOU.svg)](https://asciinema.org/a/8hjBG2jVvZh5LHStkhlrcvIOU?t=1&speed=2&cols=80&rows=15)
 
 ### Greatest Common Devisor  
 You need to determine the greatest common devisor of two given numbers. Launch with:  
 ```
 brain-gcd
 ```  
+[![asciicast](https://asciinema.org/a/2PIWl4H64GrWMpDwiwfklmhZR.svg)](https://asciinema.org/a/2PIWl4H64GrWMpDwiwfklmhZR?t=1&speed=2&cols=80&rows=15)
 
 
 ### Arithmetic Progression  
@@ -47,27 +49,12 @@ You need to determine a hidden value in an arithmetic progression. Launch with:
 ```
 brain-progression
 ```  
-
+[![asciicast](https://asciinema.org/a/3p1sCdthoGPsZRKeVGLnYCaEa.svg)](https://asciinema.org/a/3p1sCdthoGPsZRKeVGLnYCaEa?t=1&speed=2&cols=80&rows=15)
 
 ### Prime Numbers  
 You need to answer, is the given number prime or not. Launch with:
 ```
 brain-prime
 ```  
+[![asciicast](https://asciinema.org/a/aaIRQEZuNu0bZpXbWPHcCmeCn.svg)](https://asciinema.org/a/aaIRQEZuNu0bZpXbWPHcCmeCn?t=1&speed=2&cols=80&rows=15)
 
-
-## Demos
-### "Even" game
-[![asciicast](https://asciinema.org/a/OY9JtvoMmajV6GaoLN7WJk1Or.svg)](https://asciinema.org/a/OY9JtvoMmajV6GaoLN7WJk1Or)
-
-### "Calc" game
-[![asciicast](https://asciinema.org/a/6njnDT94AFqnqpI7NQnsNWhLF.svg)](https://asciinema.org/a/6njnDT94AFqnqpI7NQnsNWhLF)
-
-### "Greatest Common Devisor" game
-[![asciicast](https://asciinema.org/a/KAAOhKMrrAIYKT9B5QypigFxb.svg)](https://asciinema.org/a/KAAOhKMrrAIYKT9B5QypigFxb)
-
-### "Progression" game
-[![asciicast](https://asciinema.org/a/NhA6m0VK7tQPXLCLWyubBVEXh.svg)](https://asciinema.org/a/NhA6m0VK7tQPXLCLWyubBVEXh)
-
-### "Prime" game
-[![asciicast](https://asciinema.org/a/wKI0sCHhfrzr6a7Zey0otbzwN.svg)](https://asciinema.org/a/wKI0sCHhfrzr6a7Zey0otbzwN)
