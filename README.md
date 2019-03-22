@@ -21,7 +21,7 @@ All ready to go now!
 - [Arithmetic Progression](#arithmetic-progression)
 - [Prime Numbers](#prime-numbers)
 
-## Description and demos
+## Usage
 ### Even Numbers  
 You need to ansver, is the given number even or not. Launch with:   
 ```
