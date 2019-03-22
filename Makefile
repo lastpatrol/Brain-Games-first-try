@@ -27,3 +27,8 @@ publish:
 
 lint:
 	npx eslint .
+
+push:
+	git add .
+	git commit -m "$(m)"
+	git push
