@@ -3,7 +3,9 @@ import { makeStep, getRandom } from '../utils';
 
 const description = 'What number is missing in the progression?';
 
-const progressionAsString = (startValue, length, step, unknownPoint) => {
+const length = 10;
+
+const makeString = (startValue, step, unknownPoint) => {
   const endValue = startValue + step * (length - 1);
   const unknownValue = startValue + step * unknownPoint;
 
@@ -21,13 +23,12 @@ const progressionAsString = (startValue, length, step, unknownPoint) => {
 };
 
 const makeGameData = () => {
-  const progressionLength = 10;
-  const unknownPoint = getRandom(0, progressionLength - 1);
+  const unknownPoint = getRandom(0, length - 1);
   const step = getRandom(1, 21);
   const startValue = getRandom(1, 21);
 
   const rightAnswer = String(startValue + (step * unknownPoint));
-  const question = progressionAsString(startValue, progressionLength, step, unknownPoint);
+  const question = makeString(startValue, step, unknownPoint);
 
   return makeStep(question, rightAnswer);
 };

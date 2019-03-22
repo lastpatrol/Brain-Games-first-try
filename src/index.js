@@ -3,14 +3,14 @@ import { getQuestion, getAnswer } from './utils';
 
 const howManyRounds = 3;
 
-export default (description, makeQuestionAndAnswer) => {
+export default (description, makeGameData) => {
   console.log('\nWelcome to the Brain Games!');
   console.log(description);
   const playerName = readlineSync.question('\nMay I have your name? ');
   console.log(`Hello, ${playerName}!\n`);
 
   for (let i = 0; i < howManyRounds; i += 1) {
-    const step = makeQuestionAndAnswer();
+    const step = makeGameData();
     const question = getQuestion(step);
     const rightAnswer = getAnswer(step);
 
