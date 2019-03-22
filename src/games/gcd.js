@@ -5,7 +5,7 @@ const description = 'Find the greatest common divisor of given numbers.';
 
 const findGcd = (a, b) => {
   if (a === 0 || b === 0) {
-    return a + b;
+    return NaN;
   }
 
   const larger = a > b ? a : b;
