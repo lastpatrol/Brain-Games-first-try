@@ -5,12 +5,12 @@ const description = 'What is the result of the expression?';
 
 const calcExpression = (a, b, operator) => {
   switch (operator) {
-    case '+':
-      return a + b;
     case '-':
       return a - b;
-    default:
+    case '*':
       return a * b;
+    default:
+      return a + b;
   }
 };
 
