@@ -7,29 +7,34 @@ This is a set of simple command-line games written in JavaScript. The architectu
 
 ## Installation
 Execute from the terminal:  
-`npm install -g brain-games-hexlet-tim`  
+    `npm install -g brain-games-hexlet-tim`  
 All ready to go now!  
 
 ## List of the games so far
 ### Even Numbers  
-Launch with `brain-even`.
-You need to ansver, is the given number even or not.  
+Launch with:   
+```brain-even```
+Game task: you need to ansver, is the given number even or not.  
 
 ### Calculator  
-Launch with `brain-calc`.
-You need to calculate the value of an arithmetic expression.
+Launch with:   
+```brain-calc```
+Game task: you need to calculate the value of an arithmetic expression.
 
 ### Greatest Common Devisor  
-Launch with `brain-gcd`.  
-You need to determine the greatest common devisor of two given numbers.
+Launch with:  
+```brain-gcd```  
+Game task: you need to determine the greatest common devisor of two given numbers.
 
 ### Arithmetic Progression  
-Launch with `brain-progression`.  
-You need to determine a hidden value in an arithmetic progression.
+Launch with:  
+```brain-progression```  
+Game task: you need to determine a hidden value in an arithmetic progression.
 
 ### Prime Numbers  
-Launch with `brain-prime`.  
-You need to answer, is the given number prime or not.
+Launch with:  
+```brain-prime```  
+Game task: you need to answer, is the given number prime or not.
 
 ## Demos
 ### "Even" game
