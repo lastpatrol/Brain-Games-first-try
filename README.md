@@ -13,6 +13,13 @@ npm install -g brain-games-hexlet-tim
 All ready to go now!  
 
 ## List of the games so far
+- [Even Numbers](#even)
+- [Calculator](#calculator)
+- [Greatest Common Devisor](#greatest)
+- [Arithmetic Progression](#arithmetic)
+- [Prime Numbers](#prime)
+
+## Description and demos
 ### Even Numbers  
 You need to ansver, is the given number even or not. Launch with:   
 ```
