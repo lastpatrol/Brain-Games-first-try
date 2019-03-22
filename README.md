@@ -10,6 +10,8 @@ Execute from the terminal:
 ```
 npm install -g brain-games-hexlet-tim
 ```  
+[![asciicast](https://asciinema.org/a/u0EPMJ5N6Ww4SlaxJeplLWexO.svg)](https://asciinema.org/a/u0EPMJ5N6Ww4SlaxJeplLWexO?t=1&speed=2&cols=80&rows=15)
+
 All ready to go now!  
 
 ## List of the games so far
