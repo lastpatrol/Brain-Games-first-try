@@ -6,20 +6,17 @@ const description = 'What number is missing in the progression?';
 const length = 10;
 
 const makeString = (startValue, step, unknownPoint) => {
-  const endValue = startValue + step * (length - 1);
-  const unknownValue = startValue + step * unknownPoint;
-
-  const iter = (value, acc) => {
-    if (value > endValue) {
+  const iter = (counter, acc) => {
+    if (counter === length) {
       return acc;
     }
 
-    const newAddition = (value === unknownValue) ? '..' : value;
-    const spaceAddition = (value === endValue) ? '' : ' ';
-    return iter(value + step, `${acc}${newAddition}${spaceAddition}`);
+    const newAddition = (counter === unknownPoint) ? '..' : startValue + step * counter;
+    const spaceAddition = (counter === length - 1) ? '' : ' ';
+    return iter(counter + 1, `${acc}${newAddition}${spaceAddition}`);
   };
 
-  return iter(startValue, '');
+  return iter(0, '');
 };
 
 const makeGameData = () => {
