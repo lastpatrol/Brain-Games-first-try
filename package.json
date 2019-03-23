@@ -1,6 +1,6 @@
 {
   "name": "brain-games-hexlet-tim",
-  "version": "1.7.4",
+  "version": "1.7.5",
   "description": "Console game, study project for Hexlet.",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "hexlet-pairs": "^1.0.8",
+    "prime-number": "^0.2.2",
     "readline-sync": "^1.4.9"
   }
 }

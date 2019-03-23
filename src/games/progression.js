@@ -5,7 +5,7 @@ const description = 'What number is missing in the progression?';
 
 const length = 10;
 
-const makeString = (startValue, step, unknownPoint) => {
+const makeQuestion = (startValue, step, unknownPoint) => {
   const iter = (counter, acc) => {
     if (counter === length) {
       return acc;
@@ -25,7 +25,7 @@ const makeGameData = () => {
   const startValue = getRandom(1, 21);
 
   const rightAnswer = String(startValue + (step * unknownPoint));
-  const question = makeString(startValue, step, unknownPoint);
+  const question = makeQuestion(startValue, step, unknownPoint);
 
   return makeStep(question, rightAnswer);
 };
